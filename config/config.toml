@@ -1,0 +1,28 @@
+# Valid TOML config file
+# Don't forget to change <user> with your user
+data-path="./data" 
+
+# Network
+host-whitelist=["*"]
+
+p2p-port=30000
+max-peers=42
+
+rpc-http-enabled=true
+rpc-http-port=8540
+rpc-http-cors-origins=["all"]
+rpc-http-api=[ 'ADMIN', 'ETH', 'NET', 'WEB3', 'CLIQUE', 'IBFT', 'PERM', 'DEBUG', 'MINER', 'EEA', 'PRIV', 'TXPOOL']
+
+# Chain
+# genesis-file="/etc/besu/genesis.json" # Path to the custom genesis file
+genesis-file="../genesis.json"
+min-gas-price=0
+
+# Mining
+miner-enabled=true
+miner-coinbase="0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"
+
+# Privacy
+privacy-enabled=false
+privacy-public-key-file="./orion/node1Key.pub"
+privacy-url="http://localhost:8880"
